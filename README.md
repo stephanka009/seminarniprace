@@ -1,1 +1,3 @@
 # seminarniprace
+
+téma: Stray kids 
