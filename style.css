@@ -1,0 +1,82 @@
+body {
+   background-color: #111;
+   color: white;
+   font-family: Arial;
+   margin: 0;
+   text-align: center;
+}
+header {
+   background-color: #1c1c1c;
+   padding: 70px 20px;
+   border-bottom: 5px solid red;
+}
+header h1 {
+   font-size: 65px;
+   margin: 0;
+   letter-spacing: 5px;
+}
+header h2 {
+   color: red;
+   font-size: 28px;
+}
+.uvod {
+   padding: 40px;
+   max-width: 700px;
+   margin: auto;
+}
+.uvod h2 {
+   color: red;
+}
+.odkazy {
+   background-color: #222;
+   padding: 30px;
+}
+.odkazy h2 {
+   color: red;
+}
+.odkazy a {
+   display: inline-block;
+   background-color: #b80000;
+   color: white;
+   padding: 12px 20px;
+   margin: 8px;
+   text-decoration: none;
+   border-radius: 5px;
+}
+.odkazy a:hover {
+   background-color: white;
+   color: black;
+}
+.nadpis {
+   font-size: 32px;
+   margin-top: 50px;
+   color: red;
+}
+.clenove {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 30px;
+}
+.clen {
+   background-color: #222;
+   border: 2px solid #b80000;
+   border-radius: 10px;
+   width: 220px;
+   padding: 20px;
+}
+.clen h2 {
+   color: red;
+}
+.clen:hover {
+   background-color: #333;
+}
+footer {
+   background-color: #b80000;
+   padding: 25px;
+   margin-top: 40px;
+}
+footer h2 {
+   font-size: 20px;
+}
