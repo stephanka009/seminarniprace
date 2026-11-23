@@ -1,3 +1,6 @@
+html {
+   scroll-behavior: smooth;
+}
 body {
    background-color: #111;
    color: white;
@@ -5,78 +8,160 @@ body {
    margin: 0;
    text-align: center;
 }
+/* Navigace */
+nav {
+   background-color: black;
+   padding: 20px;
+   position: sticky;
+   top: 0;
+   z-index: 5;
+}
+nav a {
+   color: white;
+   margin: 15px;
+   text-decoration: none;
+   font-weight: bold;
+}
+nav a:hover {
+   color: red;
+   text-decoration: underline;
+}
+/* Úvod */
 header {
-   background-color: #1c1c1c;
+   background-color: #222;
    padding: 70px 20px;
    border-bottom: 5px solid red;
 }
 header h1 {
-   font-size: 65px;
-   margin: 0;
-   letter-spacing: 5px;
+   font-size: 60px;
 }
 header h2 {
    color: red;
-   font-size: 28px;
 }
-.uvod {
-   padding: 40px;
-   max-width: 700px;
-   margin: auto;
-}
-.uvod h2 {
+header h1:hover {
    color: red;
 }
-.odkazy {
-   background-color: #222;
-   padding: 30px;
-}
-.odkazy h2 {
-   color: red;
-}
-.odkazy a {
-   display: inline-block;
-   background-color: #b80000;
-   color: white;
-   padding: 12px 20px;
-   margin: 8px;
-   text-decoration: none;
-   border-radius: 5px;
-}
-.odkazy a:hover {
-   background-color: white;
-   color: black;
+/* Sekce */
+section {
+   padding: 40px 20px;
+   scroll-margin-top: 70px;
 }
 .nadpis {
-   font-size: 32px;
-   margin-top: 50px;
+   color: red;
+   font-size: 30px;
+   text-decoration: underline;
+}
+.nadpis:hover {
+   color: white;
+}
+/* Seznam */
+ul {
+   display: inline-block;
+   text-align: left;
+   line-height: 2;
+}
+li:hover {
    color: red;
 }
+/* Kartičky členů */
 .clenove {
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
    gap: 20px;
-   padding: 30px;
 }
 .clen {
    background-color: #222;
-   border: 2px solid #b80000;
+   border: 2px solid red;
    border-radius: 10px;
    width: 220px;
    padding: 20px;
+   color: white;
+   text-decoration: none;
+   transition: 0.3s;
 }
 .clen h2 {
    color: red;
 }
 .clen:hover {
    background-color: #333;
+   transform: scale(1.05);
 }
+.clen:hover h2 {
+   color: white;
+   text-decoration: underline;
+}
+/* Okno s fotografií */
+.okno {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.9);
+   justify-content: center;
+   align-items: center;
+   z-index: 10;
+}
+.okno:target {
+   display: flex;
+}
+.obsah {
+   background-color: #222;
+   border: 3px solid red;
+   padding: 25px;
+   border-radius: 15px;
+   position: relative;
+   width: 80%;
+   max-width: 400px;
+}
+.obsah h2 {
+   color: red;
+}
+.obsah img {
+   width: 100%;
+   max-height: 65vh;
+   object-fit: contain;
+   border-radius: 10px;
+}
+.zavrit {
+   position: absolute;
+   right: 15px;
+   top: 5px;
+   color: white;
+   font-size: 35px;
+   text-decoration: none;
+}
+/* Kontakt */
+#kontakt {
+   background-color: #222;
+}
+#kontakt a {
+   color: white;
+}
+#kontakt a:hover {
+   color: red;
+   text-decoration: underline;
+}
+/* Patička */
 footer {
    background-color: #b80000;
-   padding: 25px;
-   margin-top: 40px;
+   padding: 30px;
+}
+footer a {
+   color: white;
 }
 footer h2 {
    font-size: 20px;
+}
+/* Mobil */
+@media (max-width: 600px) {
+   header h1 {
+       font-size: 35px;
+   }
+   nav a {
+       display: inline-block;
+       margin: 5px;
+   }
 }
